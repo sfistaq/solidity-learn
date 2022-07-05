@@ -216,13 +216,13 @@ describe("MyNFT Token Tests", () => {
       expect(await Token.balanceOf(buyer1.address)).to.equal(0);
 
       await expect(Token.ownerOf(1)).to.be.revertedWith(
-        "ERC721: owner query for nonexistent token"
+        "ERC721: invalid token ID"
       );
     });
 
     it("Should revert burn token by non-owner", async () => {
       await expect(Token.connect(buyer2).burn(1)).to.be.revertedWith(
-        "ERC721Burnable: caller is not owner nor approved"
+        "ERC721: caller is not token owner nor approved"
       );
 
       expect(await Token.totalSupply()).to.equal(1);
