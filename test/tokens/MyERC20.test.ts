@@ -1,5 +1,6 @@
 import type { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
-import type { MyERC20, ERC20MockToken } from "../../typechain";
+import type { MyERC20 } from "../../typechain-types/contracts/tokens";
+import type { ERC20MockToken } from "../../typechain-types/contracts/mock";
 import {
   deployContract,
   parseEther,
