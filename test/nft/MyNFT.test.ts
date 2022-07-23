@@ -1,5 +1,5 @@
 import type { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
-import { MyNFT } from "../../typechain";
+import { MyNFT } from "../../typechain-types/contracts/nft";
 import {
   deployContract,
   parseEther,
